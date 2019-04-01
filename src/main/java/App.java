@@ -15,7 +15,6 @@ public class App {
         List<UserDTO> userDTOList = service.getUsers();
 
         System.out.println("***** Добавление следующих пользователей в репозиторий *****\n");
-
         service.saveUsers(userDTOList);
 
         System.out.println("\n***** Сортировка репозитория по id пользователей в порядке возрастания *****\n");
