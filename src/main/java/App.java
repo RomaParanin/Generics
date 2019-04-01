@@ -15,7 +15,7 @@ public class App {
         List<UserDTO> userDTOList = service.getUsers();
 
         System.out.println("***** Добавление следующих пользователей в репозиторий *****");
-        service.addUsers(userDTOList);
+        service.saveUsers(userDTOList);
 
         System.out.println("***** Содержимое репозитория *****");
         for (UserDTO userDTO : userDTOList) {
@@ -35,7 +35,7 @@ public class App {
         }
 
         System.out.println("***** Сортировка репозитория по номеру квартир пользователей в порядке возрастания *****");
-        Comparator<UserDTO> comparator = Comparator.comparing(appartment -> appartment.getAddress().getAppartment());
+        Comparator<UserDTO> comparator = Comparator.comparing(apartment -> apartment.getAddress().getApartment());
         Collections.sort(userDTOList, comparator);
         for (UserDTO userDTO : userDTOList) {
             System.out.println(userDTO.toString());

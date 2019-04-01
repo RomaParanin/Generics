@@ -19,23 +19,23 @@ public class RepositoryImpl implements Repository<User> {
 
     @Override
     public List<User> getUsers() {
-        ArrayList<User> users = new ArrayList<User>();
+        ArrayList<User> users = new ArrayList<>();
         Random random = new Random();
-        for (int i = 0; i < random.nextInt(); i++){
+        for (int i = 0; i < random.nextInt(4 * 5); i++){
             users.add(userInfo.createUser());
         }
         return users;
     }
 
     @Override
-    public void addUser(User user) {
-        System.out.println( "Идентификационный номер: " + user.getId() + ", имя: " + user.getName() + ", дата рождения: " + user.getBirthDate() + ", " + user.getAddress());
+    public void saveUser(User user) {
+        System.out.println("Идентификационный номер: " + user.getId() + ", имя: " + user.getName() + ", дата рождения: " + user.getBirthDate() + ", " + user.getAddress());
     }
 
     @Override
-    public void addUsers(List<User> users) {
+    public void saveUsers(List<User> users) {
         for (User user : users){
-            addUser(user);
+            saveUser(user);
         }
     }
 }

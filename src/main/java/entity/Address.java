@@ -4,13 +4,13 @@ public class Address {
     private String city;
     private String street;
     private int building;
-    private int appartment;
+    private int apartment;
 
-    public Address(String city, String street, int building, int appartment) {
+    public Address(String city, String street, int building, int apartment) {
         this.city = city;
         this.street = street;
         this.building = building;
-        this.appartment = appartment;
+        this.apartment = apartment;
     }
 
     public String getCity() {
@@ -25,8 +25,8 @@ public class Address {
         return building;
     }
 
-    public int getAppartment() {
-        return appartment;
+    public int getApartment() {
+        return apartment;
     }
 
     @Override
@@ -34,6 +34,6 @@ public class Address {
         return "Адрес пользователя: город " + city +
                 ", улица " + street +
                 ", дом " + building +
-                ", квартира " + appartment + ".";
+                ", квартира " + apartment + ".";
     }
 }

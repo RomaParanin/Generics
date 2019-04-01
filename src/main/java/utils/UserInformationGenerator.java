@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 public class UserInformationGenerator {
-    Random random = new Random();
+    private Random random = new Random();
     private List<String> names = new ArrayList<>();
     {
         names.add("Василий");
@@ -75,7 +75,7 @@ public class UserInformationGenerator {
         return random.nextInt(max - min) + min;
     }
 
-    public int getRandomAppartment() {
+    public int getRandomApartment() {
         int min = 1;
         int max = 560;
         return random.nextInt(max - min) + min;
@@ -87,7 +87,7 @@ public class UserInformationGenerator {
 
     public User createUser() {
         return new User(getRandomId(), getRandomName(), getRandomBirthDate(),
-                new Address(getRandomCity(), getRandomStreet(), getRandomBuilding(), getRandomAppartment()));
+                new Address(getRandomCity(), getRandomStreet(), getRandomBuilding(), getRandomApartment()));
     }
 
 
