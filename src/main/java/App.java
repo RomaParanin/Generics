@@ -17,11 +17,6 @@ public class App {
         System.out.println("***** Добавление следующих пользователей в репозиторий *****");
         service.saveUsers(userDTOList);
 
-        System.out.println("***** Содержимое репозитория *****");
-        for (UserDTO userDTO : userDTOList) {
-            System.out.println(userDTO.toString());
-        }
-
         System.out.println("***** Сортировка репозитория по id пользователей в порядке возрастания *****");
         Collections.sort(userDTOList, Comparator.comparing(UserDTO::getId));
         for (UserDTO userDTO : userDTOList){
